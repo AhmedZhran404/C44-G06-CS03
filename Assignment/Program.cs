@@ -5,113 +5,113 @@
         static void Main(string[] args)
         {
 
-            // #region Question1
-            // /*
-            //  Write a program that allows the user to enter a number then print it.
-            // */
-            // Console.WriteLine("Enter Your Number: ");
-            // int.TryParse(Console.ReadLine(), out int number);
-            // Console.WriteLine($"The Number is: {number}");
+            #region Question1
+            /*
+             Write a program that allows the user to enter a number then print it.
+            */
+            Console.WriteLine("Enter Your Number: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            Console.WriteLine($"The Number is: {number}");
 
-            // #endregion
+            #endregion
 
-            // #region Question2
-            // /*
-            //      Write C# program that converts a string to an 
-            //       integer, but the string contains non-numeric 
-            //       characters. And mention what will happen 
-            //*/
+            #region Question2
+            /*
+                 Write C# program that converts a string to an 
+                  integer, but the string contains non-numeric 
+                  characters. And mention what will happen 
+           */
 
-            // string name = "ahmed";
-            // // int num = (int)name; // Error can not conver
+            string name = "ahmed";
+            // int num = (int)name; // Error can not conver
 
-            // // int num = Convert.ToInt32(name); // Exception
+            // int num = Convert.ToInt32(name); // Exception
 
-            // // All conversion methods will throw an exception except TryParse, which handles the conversion safely.
-            // #endregion
+            // All conversion methods will throw an exception except TryParse, which handles the conversion safely.
+            #endregion
 
-            // #region Question3
-            // /*
-            //   Write C# program that Perform a simple arithmetic 
-            //   operation with floating-point numbers And mention 
-            //   what will happen 
-            //  */
-
-
-            // double num1 = 4.56;
-            // double num2 = 5.55677;
-
-            // Console.WriteLine("Result Is: " + num1 * num2);   //  25.3388712
-            //                                                   //----------------------------------------
-            // float number1 = 4.56f;
-            // float number2 = 5.55677f;
-
-            // Console.WriteLine("Result Is: " + number1 * number2); // 25.338871
+            #region Question3
+            /*
+              Write C# program that Perform a simple arithmetic 
+              operation with floating-point numbers And mention 
+              what will happen 
+             */
 
 
-            // /*
-            //  he result is slightly different because float has lower precision than double.
-            //     double gives a more accurate result with more digits after the decimal point.
-            //  */
+            double num1 = 4.56;
+            double num2 = 5.55677;
 
-            // #endregion
+            Console.WriteLine("Result Is: " + num1 * num2);   //  25.3388712
+         //----------------------------------------
+            float number1 = 4.56f;
+            float number2 = 5.55677f;
 
-
-            // #region Question4
-
-            // /*
-            //     Write C# program that Extract a substring from a 
-            //     given string. 
-            //  */
-
-            // Console.Write("Enter You Text: ");
-            // string text = Console.ReadLine();
-
-            // Console.Write("From which position do you want to start cutting the text? ");
-            // bool isParse = int.TryParse(Console.ReadLine(), out int index);
-
-            // if (isParse && index < text.Length)
-            // {
-            //     Console.WriteLine(text.Substring(index));
-            // }
-            // else
-            // {
-            //     Console.WriteLine("The index you entered is incorrect");
-            // }
+            Console.WriteLine("Result Is: " + number1 * number2); // 25.338871
 
 
-            // #endregion
+            /*
+             he result is slightly different because float has lower precision than double.
+                double gives a more accurate result with more digits after the decimal point.
+             */
+
+            #endregion
 
 
-            // #region Question5
+            #region Question4
 
-            // /*
-            //   Write C# program that Assigning one value type 
-            //   variable to another and modifying the value of one 
-            //   variable and mention what will happen 
-            //  */
-            // int numberOne = 5; // value Type Store In Stack
+            /*
+                Write C# program that Extract a substring from a 
+                given string. 
+             */
 
-            // int numberTwo = 20; // value Type Store In Stack
+            Console.Write("Enter You Text: ");
+            string text = Console.ReadLine();
 
-            // numberOne = numberTwo;
+            Console.Write("From which position do you want to start cutting the text? ");
+            bool isParse = int.TryParse(Console.ReadLine(), out int index);
 
-            // Console.WriteLine($"numberOne => {numberOne}"); // 20
-            // Console.WriteLine($"numberTwo => {numberTwo}"); // 20
-            // numberOne += 4;
-            // Console.WriteLine($"numberOne => {numberOne}"); // 24
-            // Console.WriteLine($"numberTwo => {numberTwo}"); // 20 
+            if (isParse && index < text.Length)
+            {
+                Console.WriteLine(text.Substring(index));
+            }
+            else
+            {
+                Console.WriteLine("The index you entered is incorrect");
+            }
 
-            // // What Happen :
-            // /*
-            // 1) When numberOne = numberTwo; is executed, the value of numberTwo (which is 20) is copied into numberOne.
-            //   Both variables now hold the same value, but they are still independent.
 
-            //  2) When numberOne is increased by 4, it becomes 24, 
-            //     while numberTwo remains unchanged 
-            //     because value types are stored separately in memory.
-            //  */
-            // #endregion
+            #endregion
+
+
+            #region Question5
+
+            /*
+              Write C# program that Assigning one value type 
+              variable to another and modifying the value of one 
+              variable and mention what will happen 
+             */
+            int numberOne = 5; // value Type Store In Stack
+
+            int numberTwo = 20; // value Type Store In Stack
+
+            numberOne = numberTwo;
+
+            Console.WriteLine($"numberOne => {numberOne}"); // 20
+            Console.WriteLine($"numberTwo => {numberTwo}"); // 20
+            numberOne += 4;
+            Console.WriteLine($"numberOne => {numberOne}"); // 24
+            Console.WriteLine($"numberTwo => {numberTwo}"); // 20 
+
+            // What Happen :
+            /*
+            1) When numberOne = numberTwo; is executed, the value of numberTwo (which is 20) is copied into numberOne.
+              Both variables now hold the same value, but they are still independent.
+
+             2) When numberOne is increased by 4, it becomes 24, 
+                while numberTwo remains unchanged 
+                because value types are stored separately in memory.
+             */
+            #endregion
 
 
             #region Question6
@@ -122,28 +122,31 @@
               one variable and mention what will happen 
             */
 
-             Point P1 = new Point() { x = 1, y = 2 };
+            Point P1 = new Point() { x = 1, y = 2 };
              Point P2 = new Point() { x = 1, y = 2 };
 
-             Console.WriteLine($"Object One P1 is :x -> {P1.x} , y -> {P1.y}");
-             Console.WriteLine($"Object Two P2 is :x -> {P2.x} , y -> {P2.y}");
+             Console.WriteLine($"Object One P1 is :x -> {P1.x} , y -> {P1.y}"); // 1 , 2
+             Console.WriteLine($"Object Two P2 is :x -> {P2.x} , y -> {P2.y}"); // 1 , 2
 
             P1.x = 20;
             P2.x = 30;
 
-            Console.WriteLine($"P1.x => {P1.x}");
-            Console.WriteLine($"P2.x => {P2.x}");
+            Console.WriteLine($"P1.x => {P1.x}"); // 20
+            Console.WriteLine($"P2.x => {P2.x}"); // 30
 
             P1 = P2;
 
             P2.x = 40;
 
-            Console.WriteLine($"P1.x ==> {P1.x}");
-            Console.WriteLine($"P2.x ==> {P2.x}");
+            Console.WriteLine($"P1.x ==> {P1.x}"); // 40
+            Console.WriteLine($"P2.x ==> {P2.x}"); // 40
 
-
-
-
+            // What happen
+            /*
+             * When P1 = P2; is executed, both P1 and P2 now reference the same object in memory,
+             * because Point is a reference type (class).
+             * So when P2.x is changed to 40, P1.x also reflects that change since both variables point to the same object.
+             */
             #endregion
 
 
