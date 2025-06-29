@@ -254,11 +254,43 @@
             if (isParse06)
             {
                 string result = (temperture < 10) ? "Just Cold" : (temperture > 30) ? "Just Hot" : "Just Good";
-               Console.WriteLine(result);
-            }else
+                Console.WriteLine(result);
+            }
+            else
             {
                 Console.WriteLine("The number of tempoerture is incorrect");
             }
+
+            #endregion
+
+            #region Question11
+
+            /*
+                Write a program that takes the date from the user 
+                and displays it in various formats using string 
+                interpolation. 
+                Ex : 
+                Today’s date : 20 , 11 , 2001 
+                Today's date : 20 / 11 / 2001 
+                Today's date : 20 – 11 – 2001 
+             */
+
+
+            Console.WriteLine("---------------- Enter today's date ----------------");
+            Console.Write("Enter Day: ");
+            bool isConverted01 = int.TryParse(Console.ReadLine() , out int day);
+            Console.Write("Enter Month: ");
+            bool isConverted02 = int.TryParse(Console.ReadLine(), out int month);
+            Console.Write("Enter year: ");
+            bool isConverted03 = int.TryParse(Console.ReadLine(), out int year);
+
+            Console.WriteLine("-----------------------------------------------------");
+
+            Console.WriteLine($"Today’s date : {day} , {month} , {year} ");
+            Console.WriteLine($"Today’s date : {day} / {month} / {year} ");
+            Console.WriteLine($"Today’s date : {day} - {month} - {year} ");
+
+
 
             #endregion
         }
