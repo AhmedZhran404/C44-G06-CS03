@@ -182,10 +182,10 @@
 
             Console.Write("Enter Your principal Amount: ");
             bool isParse01 = double.TryParse(Console.ReadLine(), out double principal);
-          
+
             Console.Write("Enter your rate of interest (%): ");
             bool isParse02 = double.TryParse(Console.ReadLine(), out double rate);
-           
+
             Console.Write("Enter Your Time(in years): ");
             bool isParse03 = double.TryParse(Console.ReadLine(), out double Time);
 
@@ -194,10 +194,11 @@
             if (isParse01 && isParse02 && isParse03)
             {
 
-               double interest = (principal * rate * Time) / 100;
-               Console.WriteLine($"the simple interest {interest}");
+                double interest = (principal * rate * Time) / 100;
+                Console.WriteLine($"the simple interest {interest}");
 
-            }else
+            }
+            else
             {
                 Console.WriteLine("One or more of the numbers you entered are not valid.");
             }
@@ -206,7 +207,34 @@
 
             #endregion
 
+            #region Question9
 
+            /*
+              Write a program that calculates the Body Mass Index 
+              (BMI) given a person's weight in kilograms and height 
+              in meters. The formula for BMI is 
+              BMI = (Weight)/(Height*Height) 
+             */
+
+            Console.Write("Enter Your Weight: ");
+            bool isParse04 = float.TryParse(Console.ReadLine(), out float weight);
+            Console.Write("Enter Your height: ");
+            bool isParse05 = float.TryParse(Console.ReadLine(), out float height);
+
+            Console.WriteLine("-------------------------------");
+
+            if(isParse04 && isParse05)
+            {
+                float bodyMassIndex = (weight) / (height * height);
+                Console.WriteLine($"bodyMassIndex(BMI) is: {bodyMassIndex}");
+            }
+            else
+            {
+                Console.WriteLine("One or more of the numbers you entered are not valid.");
+            }
+
+
+            #endregion
         }
     }
 }
