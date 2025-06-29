@@ -278,7 +278,7 @@
 
             Console.WriteLine("---------------- Enter today's date ----------------");
             Console.Write("Enter Day: ");
-            bool isConverted01 = int.TryParse(Console.ReadLine() , out int day);
+            bool isConverted01 = int.TryParse(Console.ReadLine(), out int day);
             Console.Write("Enter Month: ");
             bool isConverted02 = int.TryParse(Console.ReadLine(), out int month);
             Console.Write("Enter year: ");
@@ -293,6 +293,98 @@
 
 
             #endregion
+
+
+            #region Question12
+
+            /*
+              What is the output of the following C# code? 
+              DateTime date = new DateTime(2024, 6, 14); 
+              Console.WriteLine($"The event is on {date:MM/dd/yyyy}"); 
+              a)  The event is on 14/06/2024 
+              b)  The event is on 2024-06-14 
+              c)  The event is on 06/14/2024 
+              d)  The event is on June 14, 2024 
+             */
+
+            //  Answer is (c)
+            /*
+             date:{MM/dd/yyyy} is a format string that tells C# to display the date with:
+                MM = month (2 digits),
+                dd = day (2 digits),
+                yyyy = year (4 digits),
+                which results in 06/14/2024.
+             */
+
+            #endregion
+
+            #region Question13
+
+            /*
+              13- Which of the following statements is correct about 
+              the C#.NET code snippet given below? 
+                int d;  
+                d = Convert.ToInt32( !(30 < 20) ); 
+              e) A value 0 will be assigned to d. 
+              f) A value 1 will be assigned to d. 
+              g) A value -1 will be assigned to d. 
+              h) The code reports an error. 
+              i) The code snippet will work correctly if ! is replaced by Not. 
+             */
+
+
+            // Answer (f)
+
+            #endregion
+
+
+
+            #region Question14
+            /*
+             - Which of the following is the correct output for 
+                the C# code given below? 
+                Console.WriteLine(13 / 2 + " " + 13 % 2); // 6 1
+            
+                a) 6.5 1 
+                b) 6.5 0 
+                c) 6 0 
+                d) 6 1 
+                e) 6.5 6.5 
+             
+             */
+            // Answer is (d) in this case
+
+            //------------------------------
+            //Another Case --> Console.WriteLine(13.0 / 2 + " " + 13 % 2); ---> 6.5 1
+            //------------------------------
+
+            #endregion
+
+            #region Question15
+
+            /*
+                What will be the output of the C# code given below? 
+
+                int num = 1, z = 5; 
+                if (!(num <= 0)) (1 <= 0) => !(false) -> true
+                Console.WriteLine( ++num + z++ + " " + ++z );  // 2 + 5 + " " + 7 -> 7 7
+                else 
+                Console.WriteLine( --num + z-- + " " + --z );  
+
+
+                a) 5 6 
+                b) 6 5 
+                c) 6 6 
+                d) 7 7 
+             */
+            /*
+             * (1<=0) => !(false) -> true
+             * (2 + 5 + " " + (6 + 1)) => 7 7
+             */
+            //  Answer (d) 
+
+            #endregion
+
         }
     }
 }
