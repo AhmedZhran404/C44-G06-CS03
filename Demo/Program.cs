@@ -6,8 +6,8 @@ namespace Demo
     {
         static void Main(string[] args)
         { 
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             #region FractionsAndDiscard
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             /*
                 float  : 4 bytes (32 bits), precision ≈ 7 digits
