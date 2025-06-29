@@ -273,8 +273,8 @@ namespace Demo
             #endregion
 
             #region TernaryOperator
-                int n1 = 10, n2 = 20;
-                string message = (n1 > n2) ? "true" : "false";
+            int n1 = 10, n2 = 20;
+            string message = (n1 > n2) ? "true" : "false";
             Console.WriteLine(message);
             #endregion
 
@@ -302,6 +302,28 @@ namespace Demo
 
             #endregion
 
+            #endregion
+
+            #region String Formatting
+
+            // Equaton : 10 + 5 = 15
+            int num01 = 10, num02 = 5;
+            int result = num01 + num02;
+            // Method 1 -> String Concatenations
+            Console.WriteLine("Equaton: " + num01 + " + " + num02 + " = " + result); // Equaton: 10 + 5 = 15
+
+            // Method 2 -> Comsite Formatting
+            Console.WriteLine("Equaton : {0} + {1} = {2}", num01, num02, result);
+            // Method 3 -> String.Format
+
+            Console.WriteLine(string.Format("Equaton : {0} + {1} = {2}", num01, num02, result));
+
+            int sss = 1000;
+            Console.WriteLine(string.Format("{0:c}", sss));
+            // Method 4 -> String Interpolation
+
+            Console.WriteLine($"Number one is {num01} and number Tow is {num02} and result is {result}");
+            Console.WriteLine(@"C\ahmed\mohamed");
             #endregion
 
         }
