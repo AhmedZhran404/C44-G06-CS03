@@ -150,6 +150,25 @@
             #endregion
 
 
+            #region Question7
+
+            /*
+               Write C# program that take two string variables and 
+               print them as one variable 
+            */
+
+            Console.Write("Enter Your Text One: ");
+            string textOne = Console.ReadLine();
+            Console.Write("Enter Your Text two: ");
+            string textTwo = Console.ReadLine();
+
+            string margeTwoText = $"{textOne} {textTwo}";
+
+            Console.WriteLine($"margeTwoText => {margeTwoText}");
+
+
+
+            #endregion
 
 
 
