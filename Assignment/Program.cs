@@ -15,6 +15,22 @@
 
             #endregion
 
+            #region Question2
+            /*
+                 Write C# program that converts a string to an 
+                  integer, but the string contains non-numeric 
+                  characters. And mention what will happen 
+           */
+
+            string name = "ahmed";
+            // int num = (int)name; // Error can not conver
+
+            // int num = Convert.ToInt32(name); // Exception
+
+            // All conversion methods will throw an exception except TryParse, which handles the conversion safely.
+            #endregion
+
+
         }
     }
 }
