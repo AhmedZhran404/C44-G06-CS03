@@ -103,70 +103,71 @@ namespace Demo
 
             #endregion
 
-            #region MethodsOFCasting
-                /*
-                            #region Convert
-                            Console.WriteLine("Please Enter Your Name: ");
-                            string? name = Console.ReadLine(); // Read input From User by console
-                            Console.WriteLine("------------------------");
-                            Console.WriteLine("Pleasse Enter Your Age");
-                            // int age  = Console.ReadLine(); // Error ReadLine -> Always Take Input String
-                            // int age = (int)Console.ReadLine(); // Explicit Casting -> Invalid
-                            int age = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine("------------------------");
-                            Console.WriteLine("Pleasse Enter Your Salary");
-                            decimal Salary = Convert.ToDecimal(Console.ReadLine());
-                            Console.WriteLine("------------------------");
+                 #region MethodsOFCasting
+           
+            #region Convert
+                        Console.WriteLine("Please Enter Your Name: ");
+                        string? name = Console.ReadLine(); // Read input From User by console
+                        Console.WriteLine("------------------------");
+                        Console.WriteLine("Pleasse Enter Your Age");
+                        // int age  = Console.ReadLine(); // Error ReadLine -> Always Take Input String
+                        // int age = (int)Console.ReadLine(); // Explicit Casting -> Invalid
+                        int age = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("------------------------");
+                        Console.WriteLine("Pleasse Enter Your Salary");
+                        decimal Salary = Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("------------------------");
 
-                            Console.Clear();
-                            Console.WriteLine("Employee Date :");
-                            Console.WriteLine($"Name is: {name}");
-                            Console.WriteLine($"Age is: {age}");
-                            Console.WriteLine($"Salary is: {Salary}");
+                        Console.Clear();
+                        Console.WriteLine("Employee Date :");
+                        Console.WriteLine($"Name is: {name}");
+                        Console.WriteLine($"Age is: {age}");
+                        Console.WriteLine($"Salary is: {Salary}");
 
-                            #endregion
-                */
+                        #endregion
+            
 
-                /*
-                #region Parse
-                Console.WriteLine("Please Enter Your Name: ");
-                string? name1 = Console.ReadLine(); // Read input From User by console
-                Console.WriteLine("------------------------");
-                Console.WriteLine("Pleasse Enter Your Age");
-                // int age  = Console.ReadLine(); // Error ReadLine -> Always Take Input String
-                // int age = (int)Console.ReadLine(); // Explicit Casting -> Invalid
-                int age1 = int.Parse(Console.ReadLine());
-                Console.WriteLine("------------------------");
-                Console.WriteLine("Pleasse Enter Your Salary");
-                decimal Salary1 = decimal.Parse(Console.ReadLine());
-                Console.WriteLine("------------------------");
+           
+            #region Parse
+            Console.WriteLine("Please Enter Your Name: ");
+            string? name1 = Console.ReadLine(); // Read input From User by console
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pleasse Enter Your Age");
+            // int age  = Console.ReadLine(); // Error ReadLine -> Always Take Input String
+            // int age = (int)Console.ReadLine(); // Explicit Casting -> Invalid
+            int age1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pleasse Enter Your Salary");
+            decimal Salary1 = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("------------------------");
 
-                Console.Clear();
-                Console.WriteLine("Employee Date :");
-                Console.WriteLine($"Name is: {name1}");
-                Console.WriteLine($"Age is: {age1}");
-                Console.WriteLine($"Salary is: {Salary1}");
+            Console.Clear();
+            Console.WriteLine("Employee Date :");
+            Console.WriteLine($"Name is: {name1}");
+            Console.WriteLine($"Age is: {age1}");
+            Console.WriteLine($"Salary is: {Salary1}");
 
-                #endregion
-                */
+            #endregion
+           
 
-                #region TryParse
-                    // string number04 = "100";
-                    // bool isParse1 = int.TryParse(number04, out int x01);
-                    // Console.WriteLine("isParse = " + isParse1 + " And X01 = " + x01);
+            #region TryParse
+            string number04 = "100";
+            bool isParse1 = int.TryParse(number04, out int x01);
+            Console.WriteLine("isParse = " + isParse1 + " And X01 = " + x01);
 
-                    //Console.WriteLine("-------------------------------");
-                    //string number03 = "0";
-                    // bool isParse2 = int.TryParse(number03, out int x02);
-                    
+            Console.WriteLine("-------------------------------");
+            string number03 = "0";
+            bool isParse2 = int.TryParse(number03, out int x02);
 
-                    //if(isParse2)
-                    //{
-                    // Console.WriteLine("Converted and zero in x from number03"); ;
-                    //}else
-                    //{
-                    //   Console.WriteLine("Zero in x beacuse can not convert");
-                    //}
+
+            if (isParse2)
+            {
+                Console.WriteLine("Converted and zero in x from number03"); ;
+            }
+            else
+            {
+                Console.WriteLine("Zero in x beacuse can not convert");
+            }
 
             #region ExampleTryParse
             Console.WriteLine("Please Enter Your Name: ");
@@ -190,7 +191,10 @@ namespace Demo
             #endregion
 
             #endregion
+
             #endregion
+
+
             #endregion
 
         }
