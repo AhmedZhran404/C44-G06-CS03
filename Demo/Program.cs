@@ -5,7 +5,7 @@ namespace Demo
     internal class Program
     {
         static void Main(string[] args)
-        { 
+        {
             #region FractionsAndDiscard
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
@@ -36,8 +36,9 @@ namespace Demo
             Console.WriteLine(number.ToString("N", ArabicCulture));
             #endregion
 
+
             #region Casting
-                #region ImplicitAndExplicit
+            #region ImplicitAndExplicit
             /*
                  Casting: converting a value from one type to another.
                  There are two types of casting in C#:
@@ -103,31 +104,31 @@ namespace Demo
 
             #endregion
 
-                 #region MethodsOFCasting
-           
+            #region MethodsOFCasting
+
             #region Convert
-                        Console.WriteLine("Please Enter Your Name: ");
-                        string? name = Console.ReadLine(); // Read input From User by console
-                        Console.WriteLine("------------------------");
-                        Console.WriteLine("Pleasse Enter Your Age");
-                        // int age  = Console.ReadLine(); // Error ReadLine -> Always Take Input String
-                        // int age = (int)Console.ReadLine(); // Explicit Casting -> Invalid
-                        int age = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("------------------------");
-                        Console.WriteLine("Pleasse Enter Your Salary");
-                        decimal Salary = Convert.ToDecimal(Console.ReadLine());
-                        Console.WriteLine("------------------------");
+            Console.WriteLine("Please Enter Your Name: ");
+            string? name = Console.ReadLine(); // Read input From User by console
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pleasse Enter Your Age");
+            // int age  = Console.ReadLine(); // Error ReadLine -> Always Take Input String
+            // int age = (int)Console.ReadLine(); // Explicit Casting -> Invalid
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pleasse Enter Your Salary");
+            decimal Salary = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("------------------------");
 
-                        Console.Clear();
-                        Console.WriteLine("Employee Date :");
-                        Console.WriteLine($"Name is: {name}");
-                        Console.WriteLine($"Age is: {age}");
-                        Console.WriteLine($"Salary is: {Salary}");
+            Console.Clear();
+            Console.WriteLine("Employee Date :");
+            Console.WriteLine($"Name is: {name}");
+            Console.WriteLine($"Age is: {age}");
+            Console.WriteLine($"Salary is: {Salary}");
 
-                        #endregion
-            
+            #endregion
 
-           
+
+
             #region Parse
             Console.WriteLine("Please Enter Your Name: ");
             string? name1 = Console.ReadLine(); // Read input From User by console
@@ -148,7 +149,7 @@ namespace Demo
             Console.WriteLine($"Salary is: {Salary1}");
 
             #endregion
-           
+
 
             #region TryParse
             string number04 = "100";
@@ -194,6 +195,112 @@ namespace Demo
 
             #endregion
 
+
+            #endregion
+
+
+
+            #region Operators
+
+            #region Unary++,--
+            // Unary Operator -> one operand 
+            // ++ (prefix and postfix)
+            //  prefix -> ++x , Postfix --> x++ => x = x + 1
+            //int x04 = 5;
+            //Console.WriteLine(++x04); // 6
+            //Console.WriteLine(x04++); // 6
+            //Console.WriteLine(x04); // 7
+
+            //int y04 = 5;
+            //Console.WriteLine(--y04); // 4
+            //Console.WriteLine(y04--); // 4
+            //Console.WriteLine(y04); // 3
+            #endregion
+
+            #region Binary | Arithmetic operatos [+,-,*,/,%]
+
+            #endregion
+
+            #region Assignment Operator
+            int x05;
+            x05 = 6;
+            x05 += 3;
+            x05 -= 3;
+            x05 *= 3;
+            x05 %= 3;
+            x05 /= 3;
+
+            #endregion
+
+            #region Comparision operator
+            int X01 = 10, Y01 = 10;
+
+            Console.WriteLine(X01 == Y01);
+            Console.WriteLine(X01 != Y01);
+            Console.WriteLine(X01 > Y01);
+            Console.WriteLine(X01 < Y01);
+            Console.WriteLine(X01 >= Y01);
+            Console.WriteLine(X01 <= Y01);
+            #endregion
+
+            #region Logical operator[! , && , ||]
+            Console.WriteLine(!true);
+            Console.WriteLine(true && false);
+            Console.WriteLine(true || false);
+
+            Console.WriteLine(4 < 5 && 7 < 9);
+            Console.WriteLine(4 < 5 && 7 > 9);
+            Console.WriteLine(4 > 5 && 7 < 9);
+
+            #endregion
+
+            #region BitWise Operators [& , | , ^ , ~ , << , >> ]
+
+            // Logical Bitwise Operators (non-short-circuiting)
+            Console.WriteLine(false & true);  // False (AND - evaluates both sides)
+            Console.WriteLine(true | false); // True  (OR - evaluates both sides)
+            Console.WriteLine(false ^ true); // True  (XOR - true when different)
+
+            // Numeric Bitwise Operations
+            int X = 5, Y = 3;  // X = 0101 (5), Y = 0011 (3)
+            Console.WriteLine(X & Y);  // 1 (0101 & 0011 = 0001) - AND
+            Console.WriteLine(X | Y);  // 7 (0101 | 0011 = 0111) - OR
+            Console.WriteLine(X ^ Y);  // 6 (0101 ^ 0011 = 0110) - XOR
+            Console.WriteLine(~X);     // -6 (Two's complement of 0101)
+            Console.WriteLine(X << 1); // 10 (0101 << 1 = 1010) - Left shift
+            Console.WriteLine(X >> 1); // 2 (0101 >> 1 = 0010) - Right shift
+
+            #endregion
+
+            #region TernaryOperator
+                int n1 = 10, n2 = 20;
+                string message = (n1 > n2) ? "true" : "false";
+            Console.WriteLine(message);
+            #endregion
+
+            #region Operator Precedence
+
+            // Operator precedence determines the order in which operators are evaluated in expressions.
+
+            // From highest to lowest precedence:
+
+            // 1. Postfix:          x++, x--
+            // 2. Unary:            ++x, --x, +x, -x, !x, ~x, (type)x
+            // 3. Multiplicative:   *, /, %
+            // 4. Additive:         +, -
+            // 5. Shift:            <<, >>
+            // 6. Relational:       <, >, <=, >=, is, as
+            // 7. Equality:         ==, !=
+            // 8. Logical AND:      &
+            // 9. Logical XOR:      ^
+            // 10. Logical OR:      |
+            // 11. Conditional AND: &&
+            // 12. Conditional OR:  ||
+            // 13. Null coalescing: ??, ??=
+            // 14. Conditional:     ? :
+            // 15. Assignment:      =, +=, -=, *=, /=, %=, <<=, >>=, &=, |=, ^=
+
+            #endregion
 
             #endregion
 
