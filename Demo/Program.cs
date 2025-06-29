@@ -383,6 +383,99 @@ namespace Demo
             #endregion
             #endregion
 
+
+            #region Example02
+
+            /*
+            This example demonstrates different ways to check a student's age
+            against the threshold value of 22 years.
+            */
+            Console.WriteLine("Please Enter Student Age:");
+            int.TryParse(Console.ReadLine(), out int Age);
+
+            #region ByIfCondition
+
+            
+            if (age > 22)
+            {
+                Console.WriteLine("Student Age Is Greater Than 22");
+            }
+            else if (age < 22)
+            {
+                Console.WriteLine("Student Age Is Less Than 22");
+            }
+            else
+            {
+                Console.WriteLine("Student Age Is 22");
+            }
+
+            #endregion
+
+
+            #region BySwitchCase
+
+            // No Jump table , if else is better in this case
+            switch (age)
+            {
+                case > 22:
+                    Console.WriteLine("Student Age Is Greater Than 22");
+                    break;
+                case < 22:
+                    Console.WriteLine("Student Age Is Less Than 22");
+                    break;
+                default:
+                    Console.WriteLine("Student Age Is 22");
+                    break;
+            }
+            #endregion
+
+
+            #endregion
+
+            #region Switch Statement with Goto Case Example
+         
+
+            Console.WriteLine("Please enter a value (1000, 2000, or 3000):");
+            int.TryParse(Console.ReadLine(), out int value);
+
+            switch (value)
+            {
+                case 1000:
+                    Console.WriteLine("Option 01");
+                    break;
+
+                case 2000:
+                    Console.WriteLine("Option 02");
+                    goto case 1000;  // Jumps to case 1000 after executing this case
+
+                case 3000:
+                    Console.WriteLine("Option 03");
+                    goto case 2000;  // Jumps to case 2000 after executing this case
+
+                default:
+                    Console.WriteLine("Invalid option");
+                    break;
+            }
+            #endregion
+
+            #region Goto Statement - Advantages and Disadvantages
+
+            //  Advantages of goto:
+            // 1. Can simplify breaking out of deeply nested loops or switch statements.
+            // 2. Useful in some special cases like error handling (though rarely used in modern C#).
+            // 3. Makes control transfer explicit and direct to a labeled statement.
+
+            //  Disadvantages of goto:
+            // 1. Makes code harder to read and maintain (spaghetti code).
+            // 2. Breaks structured programming principles.
+            // 3. Can easily lead to bugs and logical errors.
+            // 4. Discouraged in modern programming unless absolutely necessary.
+
+            //  Note:
+            // - Use alternatives like methods, loops, break, continue, return, or exceptions when possible.
+
+            #endregion
+
         }
     }
 }
