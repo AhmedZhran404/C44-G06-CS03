@@ -223,7 +223,7 @@
 
             Console.WriteLine("-------------------------------");
 
-            if(isParse04 && isParse05)
+            if (isParse04 && isParse05)
             {
                 float bodyMassIndex = (weight) / (height * height);
                 Console.WriteLine($"bodyMassIndex(BMI) is: {bodyMassIndex}");
@@ -233,6 +233,32 @@
                 Console.WriteLine("One or more of the numbers you entered are not valid.");
             }
 
+
+            #endregion
+
+
+            #region Question10
+
+            /*
+             Write a program that uses the ternary operator to 
+             check if the temperature is too hot, too cold, or 
+             just good. Assign the result in a variable then 
+             display the result. Assume that below 10 degrees is 
+             "Just Cold", above 30 degrees is "Just Hot", and 
+             anything else is "Just Good". 
+             */
+
+            Console.Write("Enter the temperature: ");
+            bool isParse06 = float.TryParse(Console.ReadLine(), out float temperture);
+
+            if (isParse06)
+            {
+                string result = (temperture < 10) ? "Just Cold" : (temperture > 30) ? "Just Hot" : "Just Good";
+               Console.WriteLine(result);
+            }else
+            {
+                Console.WriteLine("The number of tempoerture is incorrect");
+            }
 
             #endregion
         }
