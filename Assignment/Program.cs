@@ -37,11 +37,26 @@
               what will happen 
              */
 
+
             double num1 = 4.56;
             double num2 = 5.55677;
             
-            Console.WriteLine("Result Is: " +  num1 * num2); // 25.338871
+            Console.WriteLine("Result Is: " +  num1 * num2);   //  25.3388712
+            //----------------------------------------
+            float number1 = 4.56f;
+            float number2 = 5.55677f;
+
+            Console.WriteLine("Result Is: " + number1 * number2); // 25.338871
+
+
+            /*
+             he result is slightly different because float has lower precision than double.
+                double gives a more accurate result with more digits after the decimal point.
+             */
+
             #endregion
+
+            
 
 
 
