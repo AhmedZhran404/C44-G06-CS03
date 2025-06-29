@@ -42,7 +42,7 @@
             double num2 = 5.55677;
 
             Console.WriteLine("Result Is: " + num1 * num2);   //  25.3388712
-         //----------------------------------------
+                                                              //----------------------------------------
             float number1 = 4.56f;
             float number2 = 5.55677f;
 
@@ -123,10 +123,10 @@
             */
 
             Point P1 = new Point() { x = 1, y = 2 };
-             Point P2 = new Point() { x = 1, y = 2 };
+            Point P2 = new Point() { x = 1, y = 2 };
 
-             Console.WriteLine($"Object One P1 is :x -> {P1.x} , y -> {P1.y}"); // 1 , 2
-             Console.WriteLine($"Object Two P2 is :x -> {P2.x} , y -> {P2.y}"); // 1 , 2
+            Console.WriteLine($"Object One P1 is :x -> {P1.x} , y -> {P1.y}"); // 1 , 2
+            Console.WriteLine($"Object Two P2 is :x -> {P2.x} , y -> {P2.y}"); // 1 , 2
 
             P1.x = 20;
             P2.x = 30;
@@ -159,6 +159,7 @@
 
             Console.Write("Enter Your Text One: ");
             string textOne = Console.ReadLine();
+
             Console.Write("Enter Your Text two: ");
             string textTwo = Console.ReadLine();
 
@@ -166,11 +167,44 @@
 
             Console.WriteLine($"margeTwoText => {margeTwoText}");
 
-
-
             #endregion
 
 
+
+            #region Question8
+
+            /*
+              Write a program that calculates the simple interest 
+              given the principal amount, rate of interest, and 
+              time. The formula for simple interest is  
+              Interest = (principal * rate * time ) /100.
+             */
+
+            Console.Write("Enter Your principal Amount: ");
+            bool isParse01 = double.TryParse(Console.ReadLine(), out double principal);
+          
+            Console.Write("Enter your rate of interest (%): ");
+            bool isParse02 = double.TryParse(Console.ReadLine(), out double rate);
+           
+            Console.Write("Enter Your Time(in years): ");
+            bool isParse03 = double.TryParse(Console.ReadLine(), out double Time);
+
+            Console.WriteLine("----------------------------------");
+
+            if (isParse01 && isParse02 && isParse03)
+            {
+
+               double interest = (principal * rate * Time) / 100;
+               Console.WriteLine($"the simple interest {interest}");
+
+            }else
+            {
+                Console.WriteLine("One or more of the numbers you entered are not valid.");
+            }
+
+
+
+            #endregion
 
 
         }
