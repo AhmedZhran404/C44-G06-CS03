@@ -262,13 +262,13 @@ namespace Demo
             Console.WriteLine(false ^ true); // True  (XOR - true when different)
 
             // Numeric Bitwise Operations
-            int X = 5, Y = 3;  // X = 0101 (5), Y = 0011 (3)
-            Console.WriteLine(X & Y);  // 1 (0101 & 0011 = 0001) - AND
-            Console.WriteLine(X | Y);  // 7 (0101 | 0011 = 0111) - OR
-            Console.WriteLine(X ^ Y);  // 6 (0101 ^ 0011 = 0110) - XOR
-            Console.WriteLine(~X);     // -6 (Two's complement of 0101)
-            Console.WriteLine(X << 1); // 10 (0101 << 1 = 1010) - Left shift
-            Console.WriteLine(X >> 1); // 2 (0101 >> 1 = 0010) - Right shift
+            int X02 = 5, Y = 3;  // X = 0101 (5), Y = 0011 (3)
+            Console.WriteLine(X02 & Y);  // 1 (0101 & 0011 = 0001) - AND
+            Console.WriteLine(X02 | Y);  // 7 (0101 | 0011 = 0111) - OR
+            Console.WriteLine(X02 ^ Y);  // 6 (0101 ^ 0011 = 0110) - XOR
+            Console.WriteLine(~X02);     // -6 (Two's complement of 0101)
+            Console.WriteLine(X02 << 1); // 10 (0101 << 1 = 1010) - Left shift
+            Console.WriteLine(X02 >> 1); // 2 (0101 >> 1 = 0010) - Right shift
 
             #endregion
 
