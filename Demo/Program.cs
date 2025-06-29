@@ -326,6 +326,63 @@ namespace Demo
             Console.WriteLine(@"C\ahmed\mohamed");
             #endregion
 
+
+            #region Control Statment
+
+            #region if - else if - else
+            Console.WriteLine("Please Enter A Month Number Existed In 1st Quarter (1-3):");
+            int.TryParse(Console.ReadLine(), out int monthNumber);
+
+            if (monthNumber == 1)
+                Console.WriteLine("Hello January");
+            else if (monthNumber == 2)
+                Console.WriteLine("Hello February");
+            else if (monthNumber == 3)
+                Console.WriteLine("Hello March");
+            else
+                Console.WriteLine("Invalid Month Number - Please enter 1, 2, or 3");
+
+            #endregion
+
+            #region switch
+            Console.WriteLine("Please enter a month number (1-3) for the first quarter:");
+            int.TryParse(Console.ReadLine(), out int monthNumber01);
+
+            switch (monthNumber)
+            {
+                case 1:
+                    Console.WriteLine("Hello January");
+                    break;
+                case 2:
+                    Console.WriteLine("Hello February");
+                    break;
+                case 3:
+                    Console.WriteLine("Hello March");
+                    break;
+                default:
+                    Console.WriteLine("Invalid month number - Please enter 1, 2, or 3");
+                    break;
+            }
+
+            #endregion
+
+            #region Switch Vs if
+            /*
+              1. Purpose:
+            - if: Used for evaluating **any condition** (expressions, comparisons, ranges, etc).
+            - switch: Used to compare a **single variable** against multiple constant values.
+
+             "Switch is faster than if in some cases because it can use a jump table for constant values, which makes execution quicker."
+
+             memory storage -> IF is better
+
+             if is more flexible --> multi conditions in it 
+
+             */
+
+            #endregion
+            #endregion
+
         }
     }
 }
